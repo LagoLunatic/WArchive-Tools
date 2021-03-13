@@ -102,7 +102,7 @@ namespace WArchiveTools.Archives
 
                 writer.Write((short)(nod.Entries.Length + 2));
 
-                writer.Write(exportFileEntries.FindIndex(i => i.Name == nod.Entries[0].Name));
+                writer.Write(exportFileEntries.IndexOf(nod.Entries[0]));
             }
 
             Pad32(writer);
